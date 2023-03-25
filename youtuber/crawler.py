@@ -8,11 +8,29 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class YoutubeCrawler:
+    """A class for crawling comments using Python Selenium 
+    """
     def __init__(self, chromedriver_path: str):
+        """Please input the path to the Chrome driver as an argument.
+
+        :param chromedriver_path: Path of 'chorome.exe'
+        :type chromedriver_path: str
+        """
         self._chrome = chromedriver_path
 
     @staticmethod
     def get_comment(chromedriver_path: str, link: str, max_comment_pg_len: int)  -> list:
+        """Use this staticmethod if you want to crawl comments for a single video link.
+
+        :param chromedriver_path: Path of 'chorome.exe'
+        :type chromedriver_path: str
+        :param link: Link of YouTube video
+        :type link: str
+        :param max_comment_pg_len: Maximum number of comment pages to search
+        :type max_comment_pg_len: int
+        :return: List of comments in the video link
+        :rtype: list
+        """
         data=[]
         with Chrome(executable_path=chromedriver_path) as driver:
             wait = WebDriverWait(driver, 15)
@@ -26,6 +44,15 @@ class YoutubeCrawler:
         return data
     
     def get_comment(self, link: str, max_comment_pg_len: int) -> list:
+        """This classmethod is used in the get_comment_df method.
+
+        :param link: Link of YouTube video
+        :type link: str
+        :param max_comment_pg_len: Maximum number of comment pages to search
+        :type max_comment_pg_len: int
+        :return: List of comments in the video link
+        :rtype: list
+        """
         data=[]
         with Chrome(executable_path=self._chrome) as driver:
             wait = WebDriverWait(driver, 15)
@@ -39,7 +66,15 @@ class YoutubeCrawler:
         return data
 
     def get_comment_df(self, links: list, max_comment_pg_len: int) -> pd.DataFrame:
-        total_dict = dict()
+        """This method crawls comments existing in multiple video links and creates a dataframe consisting of the 'comments' column containing the comments and the 'link' column containing the video link source of those comments.
+
+        :param links: Links of YouTube video
+        :type links: list
+        :param max_comment_pg_len: Maximum number of comment pages to search
+        :type max_comment_pg_len: int
+        :return: a dataframe consisting of the 'comments' column containing the comments and the 'link' column containing the video link source of those comments.
+        :rtype: pd.DataFrame
+        """
         for i in range(len(links)):
             data = self.get_comment(links[i], max_comment_pg_len)
             if i==0:
