@@ -1,11 +1,10 @@
-
 from googleapiclient.discovery import build
-import json
 
 
 class YoutubeAPI:
     """Retrieve video links searched on YouTube through the YouTube Data v3 API.
     """
+
     def __init__(self, DEVELOPER_KEY: str):
         """Please input the developer API key from the YouTube API console.
 
@@ -26,17 +25,29 @@ class YoutubeAPI:
         :return: List of searched video links
         :rtype: list
         """
-        youtube = build(self.YOUTUBE_API_SERVICE_NAME, self.YOUTUBE_API_VERSION, developerKey=self._DEV_KEY)
-        search_response = youtube.search().list(
-            q=search_keyword,
-            type='video',
-            part='id,snippet',
-            maxResults=max_link_len
-        ).execute()
+        youtube = build(
+            self.YOUTUBE_API_SERVICE_NAME,
+            self.YOUTUBE_API_VERSION,
+            developerKey=self._DEV_KEY,
+        )
+        search_response = (
+            youtube.search()
+            .list(
+                q=search_keyword,
+                type="video",
+                part="id,snippet",
+                maxResults=max_link_len,
+            )
+            .execute()
+        )
 
         links = []
         for search_result in search_response.get("items", []):
             if search_result["id"]["kind"] == "youtube#video":
-                links.append("https://www.youtube.com/watch?v={}".format(search_result["id"]["videoId"]))
-        
+                links.append(
+                    "https://www.youtube.com/watch?v={}".format(
+                        search_result["id"]["videoId"]
+                    )
+                )
+
         return links
