@@ -1,4 +1,10 @@
 # Python Package: YouTuber
+![YouTuber](https://img.shields.io/badge/pypi-youtuber-blue)
+![Pypi Version](https://img.shields.io/pypi/v/youtuber.svg)
+[![Contributor Covenant](https://img.shields.io/badge/contributor%20covenant-v2.0%20adopted-black.svg)](code_of_conduct.md)
+[![Python Version](https://img.shields.io/badge/python-3.6%2C3.7%2C3.8-black.svg)](code_of_conduct.md)
+![Code convention](https://img.shields.io/badge/code%20convention-pep8-black)
+
 Contains several useful features that can be used for youtube related projects.
 This package is intended to provide useful features for video editing, including crawling through the YouTube Data API v3 and Selenium.
 
