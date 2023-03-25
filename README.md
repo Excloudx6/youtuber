@@ -20,7 +20,10 @@ pip install youtuber
 
 # Features
 ### 1. `YoutubeAPI`
-Retrieve YouTube search results.
+Retrieve YouTube search results. <br>
+You can get your 'Youtube Data API v3' key in [here](https://console.cloud.google.com/apis/api/youtube.googleapis.com/credentials?project=sincere-canyon-278402), and you can find some guide in [here.](https://developers.google.com/youtube/v3/getting-started?hl=ko)
+
+
 ```python
 from youtuber import YoutubeAPI
 
