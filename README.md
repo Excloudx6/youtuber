@@ -51,9 +51,9 @@ df
 <br>
 
 # References
-1. [`YouTube Data API v3`](https://developers.google.com/youtube/v3/getting-started?hl=ko)
-is an API that provides access to YouTube data, such as videos, playlists, and channels.
-2. [`Selenium python`](https://selenium-python.readthedocs.io/)
+[1] YouTube Data API v3: https://developers.google.com/youtube/v3/getting-started?hl=ko
+ <br>
+[2] Selenium python: https://selenium-python.readthedocs.io/
 
 <br><br>
 
