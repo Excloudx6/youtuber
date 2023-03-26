@@ -5,7 +5,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.6%2C3.7%2C3.8-black.svg)](code_of_conduct.md)
 ![Code convention](https://img.shields.io/badge/code%20convention-pep8-black)
 ![Black Fomatter](https://img.shields.io/badge/code%20style-black-000000.svg)
-![](https://github.com/DSDanielPark/youtuber/blob/main/doc/imgs/snippet.png)
+![](https://github.com/DSDanielPark/youtuber/blob/main/doc/imgs/example.png)
 
 
 Contains several useful features that can be used for youtube related projects.
@@ -38,12 +38,12 @@ from youtuber import YoutubeAPI
 
 DEVELOPER_KEY = "enter_your_api_key"
 youtuber_v3 = YoutubeAPI(DEVELOPER_KEY)
-links = youtuber_v3.get_links('chatGPT', 3) # if you enter 3, you can get 3 video links.
+links = youtuber_v3.get_links('chatGPT', 3) #YouTube Search Keyword = 'chatGPT', return 3 links.
 
 links
-['https://www.youtube.com/watch?v=mpnh1YTT66w',
- 'https://www.youtube.com/watch?v=ykuDB3xpTTo',
- 'https://www.youtube.com/watch?v=GXm7WRtRbhA']
+['https://www.youtube.com/watch?v=xxxxx',
+ 'https://www.youtube.com/watch?v=xxxxx',
+ 'https://www.youtube.com/watch?v=xxxxx']
 ```
 
 ### 2. `YoutubeCrawler`
@@ -53,9 +53,9 @@ from youtuber import YoutubeCrawler
 
 chrome_driver = r'C:\Program Files\chromedriver.exe'
 youtuber_crawl = YoutubeCrawler(chrome_driver)
-df = youtuber_crawl.get_comment_df(links, 1) # if you enter 1, only 1 page of comments will be searched.
+df = youtuber_crawl.get_comment_df(links, 1) #if you enter 1, only 1 page of comments will be searched.
 
-df
+df #You can get pd.DataFrame object.
 ```
 
 
