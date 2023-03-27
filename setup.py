@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="youtuber",
-    version="0.1.1",
+    version="0.1.2",
     author="parkminwoo",
     author_email="parkminwoo1991@gmail.com",
     description="Support tools including crawler, video editing, YouTube API, etc.",

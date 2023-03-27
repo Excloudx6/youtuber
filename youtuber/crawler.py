@@ -34,13 +34,13 @@ class YoutubeCrawler:
         """
         data = []
         with Chrome(executable_path=chromedriver_path) as driver:
-            wait = WebDriverWait(driver, 15)
+            wait = WebDriverWait(driver, 3)
             driver.get(link)
             for item in range(max_comment_pg_len):
                 wait.until(
                     EC.visibility_of_element_located((By.TAG_NAME, "body"))
                 ).send_keys(Keys.END)
-                time.sleep(15)
+                time.sleep(7)
             for comment in wait.until(
                 EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#content"))
             ):
@@ -60,13 +60,13 @@ class YoutubeCrawler:
         """
         data = []
         with Chrome(executable_path=self._chrome) as driver:
-            wait = WebDriverWait(driver, 15)
+            wait = WebDriverWait(driver, 3)
             driver.get(link)
             for item in range(max_comment_pg_len):
                 wait.until(
                     EC.visibility_of_element_located((By.TAG_NAME, "body"))
                 ).send_keys(Keys.END)
-                time.sleep(15)
+                time.sleep(7)
             for comment in wait.until(
                 EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#content"))
             ):
