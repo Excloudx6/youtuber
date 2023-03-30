@@ -30,6 +30,7 @@ pip install youtuber
 
 ```python
 from youtuber import AutoCrawler
+
 DEVELOPER_KEY = "enter_your_dev_api_key"               # Enter your DEV API KEY at https://console.cloud.google.com/apis/api/youtube.googleapis.com/credentials?project=sincere-canyon-278402
 CHOROME_PATH = r'C:\Program Files\chromedriver.exe'    # Enter path of 'chromdriver.exe' 
 
