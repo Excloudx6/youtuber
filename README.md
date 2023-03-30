@@ -27,8 +27,8 @@ CHOROME_PATH = r'C:\Program Files\chromedriver.exe'    # Enter path of 'chromdri
 
 auto = AutoCrawler(DEVELOPER_KEY, CHOROME_PATH)
 search_keyword = 'chatGPT'      # Youtube Search Keyword
-max_link_len = 2                # How many video you crawl.
-max_comment_pg_len = 2          # How many comment pages you target to crawl.
+max_link_len = 2                # How many videos you target to crawl?
+max_comment_pg_len = 2          # How many comment pages you target to crawl?
 save_path = './enter/any/path/result.csv'
 
 df = auto.run(search_keyword, max_link_len, max_comment_pg_len, save_path)
