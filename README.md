@@ -20,6 +20,22 @@ pip install youtuber
 
 <br>
 
+```python
+from youtuber import AutoCrawler
+DEVELOPER_KEY = "enter_your_dev_api_key"               # Enter your DEV API KEY at https://console.cloud.google.com/apis/api/youtube.googleapis.com/credentials?project=sincere-canyon-278402
+CHOROME_PATH = r'C:\Program Files\chromedriver.exe'    # Enter path of 'chromdriver.exe' 
+
+auto = AutoCrawler(DEVELOPER_KEY, CHOROME_PATH)
+search_keyword = 'chatGPT'      # Youtube Search Keyword
+max_link_len = 2                # How many video you crawl.
+max_comment_pg_len = 2          # How many comment pages you target to crawl.
+save_path = './enter/any/path/result.csv'
+
+df = auto.run(search_keyword, max_link_len, max_comment_pg_len, save_path)
+```
+
+
+
 # Tutorial
 1. Main tutorial: https://github.com/DSDanielPark/youtuber/blob/main/doc/tutorial.ipynb
 2. Sub tutorial folder: Tutorials for each function can be found in [this folder](https://github.com/DSDanielPark/youtuber/tree/main/doc). 
