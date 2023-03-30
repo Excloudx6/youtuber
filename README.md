@@ -83,6 +83,10 @@ df #You can get pd.DataFrame object.
 ```
 
 
+### 3. `AutoCrawler`
+Due to dependency issues, the AutoCrawler class was created separately without inheritance, but it includes both the YoutubeAPI and YoutubeCrawler methods. The AutoCrawler class performs both search functionality via the Youtube Data API v3 and comment crawling via Selenium.
+
+
 <br>
 
 # References
