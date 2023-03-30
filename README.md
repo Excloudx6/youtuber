@@ -83,7 +83,6 @@ df #You can get pd.DataFrame object.
 ```
 
 
-
 <br>
 
 # References
@@ -96,3 +95,5 @@ df #You can get pd.DataFrame object.
 
 ### `Important Warning:` All legal responsibilities associated with the use of the package lie with the user.
 The Python package "youtuber" provides code for Python users to easily access data through the YouTube Data API v3 and Selenium. All licenses follow those of the API and dependent packages, and all responsibility for handling data and using the package lies with the user. There is no monetary compensation received for the use of this code, and it should be noted that there is no liability for the use of the code.
+Please refer to the YouTube Data API page for more details.
+https://developers.google.com/youtube/v3?hl=ko
