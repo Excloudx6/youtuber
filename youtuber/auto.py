@@ -1,6 +1,4 @@
 from googleapiclient.discovery import build
-from youtuber.api import YoutubeAPI
-from youtuber.crawler import YoutubeCrawler
 import time
 import pandas as pd
 from selenium.webdriver import Chrome
@@ -75,7 +73,7 @@ class AutoCrawler:
         :rtype: list
         """
         data = []
-        with Chrome(executable_path=self._chrome) as driver:
+        with Chrome(executable_path=self._CHROME) as driver:
             wait = WebDriverWait(driver, 3)
             driver.get(link)
             for item in range(max_comment_pg_len):
@@ -87,6 +85,7 @@ class AutoCrawler:
                 EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#content"))
             ):
                 data.append(comment.text)
+        data = [x for x in data if x != ""]
 
         return data
 
@@ -136,6 +135,10 @@ class AutoCrawler:
         links = self._get_links(search_keyword, max_link_len)
         df = self._get_comment_df(links, max_comment_pg_len)
         if save_path is not None:
-            df.to_csv(save_path, encoding="utf-8-sig", index=False)
-
+            try:
+                df.to_csv(save_path, encoding="utf-8-sig", index=False)
+                print(f"Save successed, Result dataframe save at {save_path}")
+            except Exception as e:
+                print(f"No folder exist: {save_path}, please enter right path. e.g. result/crawl.csv")
+                
         return df
