@@ -20,6 +20,14 @@ pip install youtuber
 
 <br>
 
+# Quick Start
+1. Install the Python package "youtuber".
+2. Obtain an API key for YouTube Data API v3 from the following [link](https://console.cloud.google.com/apis/api/youtube.googleapis.com/credentials?project=sincere-canyon-278402) and enter it.
+3. Enter the path of chromedriver.exe.
+4. Provide the YouTube search keyword, the number of videos to crawl, and the number of comment pages to crawl.
+5. Enter the full path of the CSV file to be saved after execution. If encoding issues arise, please save the returned pd.DataFrame object separately.
+
+
 ```python
 from youtuber import AutoCrawler
 DEVELOPER_KEY = "enter_your_dev_api_key"               # Enter your DEV API KEY at https://console.cloud.google.com/apis/api/youtube.googleapis.com/credentials?project=sincere-canyon-278402
@@ -34,7 +42,7 @@ save_path = './enter/any/path/result.csv'
 df = auto.run(search_keyword, max_link_len, max_comment_pg_len, save_path)
 ```
 
-
+<br>
 
 # Tutorial
 1. Main tutorial: https://github.com/DSDanielPark/youtuber/blob/main/doc/tutorial.ipynb
@@ -75,6 +83,9 @@ df #You can get pd.DataFrame object.
 ```
 
 
+### 3. `AutoCrawler`
+Due to dependency issues, the AutoCrawler class was created separately without inheritance, but it includes both the YoutubeAPI and YoutubeCrawler methods. The AutoCrawler class performs both search functionality via the Youtube Data API v3 and comment crawling via Selenium.
+
 
 <br>
 
@@ -88,3 +99,5 @@ df #You can get pd.DataFrame object.
 
 ### `Important Warning:` All legal responsibilities associated with the use of the package lie with the user.
 The Python package "youtuber" provides code for Python users to easily access data through the YouTube Data API v3 and Selenium. All licenses follow those of the API and dependent packages, and all responsibility for handling data and using the package lies with the user. There is no monetary compensation received for the use of this code, and it should be noted that there is no liability for the use of the code.
+Please refer to the YouTube Data API page for more details.
+https://developers.google.com/youtube/v3?hl=ko
