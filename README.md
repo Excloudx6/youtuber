@@ -24,7 +24,7 @@ pip install youtuber
 1. Install the Python package `youtuber` - `pip install youtuber`
 2. Obtain an API key for YouTube Data API v3 from the following [link](https://console.cloud.google.com/apis/api/youtube.googleapis.com/credentials?project=sincere-canyon-278402) and enter it.
 3. Enter the path of chromedriver.exe.
-4. Provide the YouTube search keyword, the number of videos to crawl, and the number of comment pages to crawl.
+4. Enter the YouTube search keyword, the number of videos to crawl, and the number of comment pages to crawl.
 5. Enter the full path of the CSV file to be saved after execution. If encoding issues arise, please save the returned pd.DataFrame object separately.
 
 
