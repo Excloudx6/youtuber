@@ -1,5 +1,5 @@
 # Python Package: YouTuber
-![YouTuber](https://img.shields.io/badge/pypi-youtuber-ornage)
+![YouTuber](https://img.shields.io/badge/pypi-youtuber-orange)
 ![Pypi Version](https://img.shields.io/pypi/v/youtuber.svg)
 [![Contributor Covenant](https://img.shields.io/badge/contributor%20covenant-v2.0%20adopted-black.svg)](code_of_conduct.md)
 [![Python Version](https://img.shields.io/badge/python-3.6%2C3.7%2C3.8-black.svg)](code_of_conduct.md)
