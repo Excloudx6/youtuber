@@ -1,3 +1,7 @@
+Development Status :: 3 - Alpha <br>
+*Copyright (c) 2023 MinWoo Park*
+<br>
+
 # Python Package: YouTuber
 ![YouTuber](https://img.shields.io/badge/pypi-youtuber-orange)
 ![Pypi Version](https://img.shields.io/pypi/v/youtuber.svg)
