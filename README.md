@@ -50,8 +50,8 @@ df = auto.run(search_keyword, max_link_len, max_comment_pg_len, save_path)
 <br>
 
 # Tutorial
-1. Main tutorial: https://github.com/DSDanielPark/youtuber/blob/main/doc/tutorial.ipynb
-2. Sub tutorial folder: Tutorials for each function can be found in [this folder](https://github.com/DSDanielPark/youtuber/tree/main/doc). 
+1. Main tutorial: https://github.com/DSDanielPark/youtuber/blob/main/docs/tutorial.ipynb
+2. Sub tutorial folder: Tutorials for each function can be found in [this folder](https://github.com/DSDanielPark/youtuber/tree/main/docs). 
 
 
 <br>
